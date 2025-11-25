@@ -1,0 +1,29 @@
+#primary {
+    justify-content: space-between;
+    align-items: center;
+    font: 800 1rem/1.40% var(--fonty-family)
+}
+
+#secondary{
+    padding: 0.875rem;
+    border-block: solid 1px var(--stroke-color);
+    gap: 2rem;
+    font: 600 0.7rem var(--fonty-family);
+}
+
+@media (width >=80em) {
+    #primary {
+        padding-block: 1.25rem;
+
+        & div {
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+        } 
+    }
+
+    #secondary{
+        font: 400 0.875rem var(--fonty-family);
+        justify-content: space-between;
+    }
+}

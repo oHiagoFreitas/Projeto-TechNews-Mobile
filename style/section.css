@@ -1,0 +1,170 @@
+section header {
+    margin-top: 1rem;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--stroke-color);
+     
+    font: var(--text-span);
+
+    a {
+        justify-self: end;
+        align-items: center;
+        gap: 8px;
+
+        span {
+            background-image: url(../assets/icons/ArrowRight.svg);
+            height: 16px;
+            width: 16px;
+
+        }
+    }
+}
+
+#featured {
+    grid-area: featured;
+
+    & div {
+        display: grid;
+        gap: 1rem;
+    }
+
+    img {
+        height: 100%;
+        object-fit: cover;
+
+    }
+
+
+    .card {
+        position: relative;
+        border-radius: 4px;
+        overflow: hidden;
+
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            top: 50%;
+            background: linear-gradient(180deg, transparent 0%, #020617 100%);
+        }
+
+        figcaption {
+            position: absolute;
+            bottom: 0;
+            padding: 1.5rem;
+
+            &:has(.text-lg) {
+                padding: 0.75rem;
+            }
+
+            h2 {
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}
+
+#weekly {
+    grid-area: weekly;
+
+    img {
+        height: auto;
+        width: 100%;
+    }
+
+    figure {
+        position: relative;
+        margin-bottom: 2rem;
+
+        .content-tag {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+        }
+
+        p {
+            margin-top: 8px;
+            font-weight: 800;
+        }
+    }
+
+}
+
+#ai {
+
+    grid-area: ai;
+
+    img {
+        width: 176px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    h3 {
+        margin-block: 8px 4px;
+    }
+
+
+}
+
+#ai article>div:first-child {
+    order: 2;
+    
+}
+
+#ai article>div:last-child {
+    order: 1;
+   
+}
+
+aside {
+    grid-area: aside;
+
+    & h3{
+        margin-top: .5rem;
+    }
+
+}
+
+
+
+@media (width >=80em) {
+
+    #featured {
+        img {
+            height: 100%;
+            object-fit: cover;
+            margin-top: 0rem;
+        }
+    }
+
+    #weekly {
+        display: grid;
+        justify-content: space-between;
+        & img {
+            height: 160px;
+            width: none;
+        }
+
+        &>div {
+            grid-template-columns: repeat(4, 292px);
+        }
+
+        figure{
+            margin-bottom: 0;
+        }
+    }
+
+    #ai article > div:first-child {
+        order: 1;  
+    }
+
+    #ai article > div:last-child {
+        order: 2;  
+    }
+
+    
+}
