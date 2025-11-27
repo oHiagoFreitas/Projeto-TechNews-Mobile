@@ -23,7 +23,7 @@ O objetivo principal foi praticar **HTML semântico**, **CSS responsivo** e orga
 
 - **HTML5**  
 - **CSS3**  
-- (adicione JS ou frameworks caso tenha usado)
+
 
 ---
 
